@@ -92,6 +92,12 @@
     </style>
 </head>
 <body>
+    <header>
+        <nav style="background: #ffffff; padding: 10px; color: #fff; text-align: center;">
+            <a href="index.html" style="color: #fff; text-decoration: none; font-weight: bold;">Home</a>
+        </nav>
+    </header>
+        <main>
     <div class="checkout-container">
         <h2>Checkout</h2>
         <div class="order-summary">
@@ -113,6 +119,12 @@
             <label for="fullname">Full Name</label>
             <input type="text" id="fullname" name="fullname" required>
 
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" required>
+
             <label for="address">Address</label>
             <input type="text" id="address" name="address" required>
 
@@ -122,35 +134,86 @@
             <label for="zip">ZIP / Postal Code</label>
             <input type="text" id="zip" name="zip" required>
 
-            <label for="country">Country</label>
-            <select id="country" name="country" required>
-                <option value="">Select Country</option>
-                <option>United States</option>
-                <option>United Kingdom</option>
-                <option>Canada</option>
-                <option>Australia</option>
-                <option>Other</option>
+             <label for="country">Country</label>
+            <input type="text" id="country" name="country" required>
+
+<label for="Province">Province</label>
+            <select id="Province" name="Province" required>
+                <option value="select province">Select Province</option>
+                <option>Punjab</option>
+                <option>Sindh</option>
+                <option>KPK</option>
+                <option>Balochistan</option>
+                </select>
+
+            <div class="section-title">Payment Method</div>
+            <label for="payment-method">Select Payment Method</label>
+            <select id="payment-method" name="payment-method" required>
+                <option value="">Choose a payment method</option>
+                <option value="cod">Cash on Delivery</option>
+                <option value="easypaisa">EasyPaisa Transfer</option>
+                <option value="jazzcash">JazzCash Transfer</option>
+                <option value="bank">Bank Account</option>
+                <option value="card">Credit or Debit Card</option>
             </select>
+            <div id="payment-details-fields"></div>
+            <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const paymentMethod = document.getElementById('payment-method');
+                const detailsFields = document.getElementById('payment-details-fields');
 
-            <div class="section-title">Payment Details</div>
-            <label for="cardname">Cardholder Name</label>
-            <input type="text" id="cardname" name="cardname" required>
+                function renderFields(method) {
+                    let html = '';
+                    switch (method) {
+                        case 'cod':
+                            html = `<p style="margin-bottom:18px;color:#444;">Pay with cash upon delivery.</p>`;
+                            break;
+                        case 'easypaisa':
+                            html = `
+                                <h1>Please transfer the amount to the following Easypaisa account:</h1>
+                                <p style="margin-bottom:18px;color:#444;">Account Number: 0309-5128189</p>
+                                <p style="margin-bottom:18px;color:#444;">Account Name/Title: Abbas Waqar</p>
+                                <b><p>Please send a screenshot of "Easypaisa Reciept" to our WhatsApp number: 0309-5128189</p></b>
+                            `;
+                            break;
+                        case 'jazzcash':
+                            html = `
+                                <h1>Please transfer the amount to the following JazzCash account:</h1>
+                                <p style="margin-bottom:18px;color:#444;">Account Number: 0309-5128189</p>
+                                <p style="margin-bottom:18px;color:#444;">Account Name/Title: Abbas Waqar</p>
+                                <b><p>Please send a screenshot of "Jazzcash Reciept" to our WhatsApp number: 0309-5128189</p></b>
+                            `;
+                            break;
+                        case 'bank':
+                            html = `
+                                <h1>Please transfer the amount to the following Bank account:</h1>
+                                <p style="margin-bottom:18px;color:#444;">Account Number: 0309-5128189</p>
+                                <p style="margin-bottom:18px;color:#444;">Account Name/Title: Abbas Waqar</p>
+                                <b><p>Please send a screenshot of "Bank Account Reciept" to our WhatsApp number: 0309-5128189</p></b>
+                                `;
+                            break;
+                        case 'card':
+                            html = `
+                                <label for="card-number">Card Number</label>
+                                <input type="text" id="card-number" name="card-number" maxlength="19" required>
+                                <label for="card-expiry">Expiry Date</label>
+                                <input type="text" id="card-expiry" name="card-expiry" placeholder="MM/YY" maxlength="5" required>
+                                <label for="card-cvc">CVC</label>
+                                <input type="text" id="card-cvc" name="card-cvc" maxlength="4" required>
+                            `;
+                            break;
+                    }
+                    detailsFields.innerHTML = html;
+                }
 
-            <label for="cardnumber">Card Number</label>
-            <input type="text" id="cardnumber" name="cardnumber" maxlength="19" required>
-
-            <div style="display: flex; gap: 12px;">
-                <div style="flex:1;">
-                    <label for="exp">Expiry</label>
-                    <input type="text" id="exp" name="exp" placeholder="MM/YY" maxlength="5" required>
-                </div>
-                <div style="flex:1;">
-                    <label for="cvv">CVV</label>
-                    <input type="text" id="cvv" name="cvv" maxlength="4" required>
-                </div>
-            </div>
+                paymentMethod.addEventListener('change', function() {
+                    renderFields(this.value);
+                });
+            });
+            </script>
             <button type="submit">Place Order</button>
         </form>
     </div>
+    </main>
 </body>
 </html>
