@@ -48,7 +48,7 @@ button{
 
 .herotext {
     position: absolute;
-    top: 13%; 
+    top: 7%; 
     left: 25%;
     transform: translate(-50%, -50%);
     color: white;
@@ -59,17 +59,9 @@ button{
     border-radius: 5px;
 }
 .spacingdiv1{
-    background-color: #FFCB73;
+    background-color: #f5f5f7;
     border : 2px black solid;
     border-radius: 10px;
-    text-align: center;
-    font-weight: bolder;
-    font-size: larger;
-    height: 40px;
-    padding-top: 15;
-}
-.spacingdiv2{
-    background-color: white;
     text-align: center;
     font-weight: bolder;
     font-size: larger;
@@ -81,7 +73,7 @@ button{
     height:40px;
 }
 .bestsellingproducts{
-    background-color:#FFCB73;
+    background-color:aliceblue;
     border: 2px solid black;
     border-radius: 10px;
 }
@@ -94,8 +86,177 @@ h1{
     text-align: center;
     
 }
-.productcard1{
-  width: 300px;
-  height :400px;
-  border:2px solid black;
+.iphone16lineup{
+  width: 99%;
+  height :650px;
+  border:2px solid #f5f5f5;
+  background-color: #f5f5f7;
+  display: flex;
+}
+.iphone16promax{
+width: 350;
+height: 550px;
+border: 1px solid black;
+margin-top: 50px;
+margin-left: 50px;
+border-radius: 50px;
+}
+.iphone16promax img{
+    width: 250px;
+    height: 300px;
+    padding-left: 50px;
+}
+.iphone16promaxheading{
+    text-align: center;
+    font-size: 40px;
+}
+.iphone16promaxpara1{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.iphone16promaxpara2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+}
+.iphone16{
+width: 350;
+height: 550px;
+border: 1px solid black;
+margin-top: 50px;
+margin-left: 90px;
+border-radius: 50px;
+}
+.iphone16 img{
+    width: 250px;
+    height: 300px;
+    padding-left: 50px;
+}
+.iphone16heading{
+    text-align: center;
+    font-size: 40px;
+}
+.iphone16para1{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.iphone16para2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+}
+.iphone16e{
+width: 350px;
+height: 550px;
+border: 1px solid black;
+margin-top: 50px;
+margin-left: 90px;
+border-radius: 50px;
+}
+.iphone16e img{
+    width: 250px;
+    height: 300px;
+    padding-left: 50px;
+}
+.iphone16eheading{
+    text-align: center;
+    font-size: 40px;
+}
+.iphone16epara1{
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+}
+.iphone16epara2{
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: blue;
+}
+.spacingdiv2{
+    width: 99.3%;
+    height: 50px;
+    background-color: aliceblue;
+    padding-top: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.macbooklineup{
+    width: 99%;
+  height :650px;
+  border:2px solid #f5f5f5;
+  background-color: #f5f5f7;
+  display: flex;
+}
+.macbookair {
+   width: 350px;
+height: 550px;
+border: 1px solid black;
+margin-top: 50px;
+margin-left: 200px;
+border-radius: 50px;
+}
+.macbookair img{
+    width: 300px;
+    padding-top: 10%;
+    padding-left: 8%;
+}
+.macbookairpara1{
+    text-align: center;
+    font-weight: bold;
+}
+.macbookairpara2{
+    text-align: center;
+}
+.macbookairpara3{
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    font-weight: bold;
+}
+.macbookpro{
+    width: 350px;
+    height: 550px;
+    border: 1px solid black;
+    margin-top: 50px;
+    margin-left: 200px;
+    border: 1px solid black;
+    border-radius: 50px;
+}
+.macbookpro img{
+    width: 300px;
+    padding-top: 10%;
+    padding-left: 8%;
+}
+.macbookpropara1{
+    text-align: center;
+    font-weight: bold;
+}
+.macbookpropara2{
+    text-align: center;
+}
+.macbookpropara3{
+    text-align: center;
+    font-size: 25px;
+    color: blue;
+    font-weight: bold;
+}
+.spacingdiv3{
+    width: 99.3%;
+    height: 50px;
+    background-color: aliceblue;
+    padding-top: 10px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+.ipadlineup{
+      width: 99%;
+  height :750px;
+  border:2px solid #f5f5f5;
+  background-color: #f5f5f7;
+  display: flex;
 }
