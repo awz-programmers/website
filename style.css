@@ -35,7 +35,8 @@
  } 
  .heroimage img { 
     width: 100%; 
-    display: block; 
+    display: block;
+    border-radius: 15px; 
  } 
 .herotext { 
     position: absolute; 
@@ -49,6 +50,17 @@
     padding: 10px 20px; 
     border-radius: 5px; 
  } 
+ .categaryheading{
+   text-align: center;
+    background-color: aliceblue; 
+    border : 2px black solid; 
+    border-radius: 10px; 
+    text-align: center; 
+    font-weight: bolder; 
+    font-size: xx-large; 
+    height: 40px; 
+    padding-top: 5;
+ }
  .spacingdiv1 { 
     background-color: #f5f5f7; 
     border : 2px black solid; 
@@ -260,3 +272,34 @@
     height: 10px; 
     text-align: center;
  }
+.categarycard {
+   width: 100%;
+   max-width: 1343px;
+   height: auto;                /* remove fixed 400px, let cards decide */
+   display: flex;
+   justify-content: center;     /* center the two cards */
+   align-items: center;
+   gap: 50px;                   /* spacing between them */
+   border-radius: 20px;
+   background-color: #f5f5f7;
+   margin: 0 auto;
+   padding: 40px 0;             /* top/bottom breathing room */
+}
+
+.iphonecategarycard
+{
+   width: 500px;
+   height: 350px;
+   border-radius: 15px;
+   overflow: hidden;            /* clip images to rounded corners */
+   flex-shrink: 0;              
+}
+
+
+.iphonecategarycard img,
+.macbookcategarycard img {
+   width: 500;
+   height: 350;
+   object-fit: cover;           /* image fills card nicely */
+   border-radius: 15px;
+}
